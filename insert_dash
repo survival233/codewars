@@ -1,0 +1,15 @@
+# Write a function insert_dash(num) / insertDash(num) / InsertDash(int num) that will insert dashes ('-') between each two odd digits in num. For example: if num is 454793 the output should be 4547-9-3. Don't count zero as an odd digit.
+
+Note that the number will always be non-negative (>= 0) #
+
+def checkOdd(ch):
+ 
+    return ((ord(ch) - 48) & 1)
+
+def insert_dash(num):
+    nums = list(str(num))
+    
+    for i in range(len(nums)-1):
+        if (checkOdd(nums[i]) and checkOdd(nums[i + 1])):
+                nums[i]=nums[i]+'-'
+    return ''.join(nums)       
