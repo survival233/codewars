@@ -2,13 +2,15 @@
 
 Note that the number will always be non-negative (>= 0) #
 
+
+# call a function that checks odd numbers #
 def checkOdd(ch):
  
     return ((ord(ch) - 48) & 1)
 
+# function for inserting dash_ after 2 odd numbers. 
 def insert_dash(num):
-    nums = list(str(num))
-    
+    nums = list(str(num))    
     for i in range(len(nums)-1):
         if (checkOdd(nums[i]) and checkOdd(nums[i + 1])):
                 nums[i]=nums[i]+'-'
