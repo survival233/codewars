@@ -1,0 +1,5 @@
+#Your task is to write such a run-length encoding. For a given string, return a list (or array) of pairs (or arrays) [ (i1, s1), (i2, s2), …, (in, sn) ]
+
+from itertools import groupby
+def run_length_encoding(s):
+    return [[len(list(group)), key] for key, group in groupby(s)]
